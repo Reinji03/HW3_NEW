@@ -15,15 +15,15 @@ code="""
 import geopandas as gpd
 
 # geoDataFrame 형태로 불러옴
-gdf_korea_sigungu = gpd.read_file('../slt/N3A_G0100000.json')
+gdf_korea_sigungu = gpd.read_file('N3A_G0100000.json')
 gdf_korea_sigungu
 
 # GeoJSON 파일로 저장하기
-gdf_korea_sigungu.to_file('../slt/N3A_G0100000.json', driver='GeoJSON')
+gdf_korea_sigungu.to_file('N3A_G0100000.json', driver='GeoJSON')
 
 # 저장된 GeoJSON 파일 불러오기
 import json # json 라이브러리 불러오기
-with open('../slt/N3A_G0100000.json', encoding='UTF-8') as f: #파일열기
+with open('N3A_G0100000.json', encoding='UTF-8') as f: #파일열기
     data = json.load(f) # 파일 읽기
 
 # 데이터 출력하기(800자까지만 출력하기)
@@ -34,15 +34,15 @@ st.code(code, language="python")
 import geopandas as gpd
 
 # geoDataFrame 형태로 불러옴
-gdf_korea_sigungu = gpd.read_file('../slt/N3A_G0100000.json')
+gdf_korea_sigungu = gpd.read_file('N3A_G0100000.json')
 gdf_korea_sigungu
 
 # GeoJSON 파일로 저장하기
-gdf_korea_sigungu.to_file('../slt/N3A_G0100000.json', driver='GeoJSON')
+gdf_korea_sigungu.to_file('N3A_G0100000.json', driver='GeoJSON')
 
 # 저장된 GeoJSON 파일 불러오기
 import json # json 라이브러리 불러오기
-with open('../slt/N3A_G0100000.json', encoding='UTF-8') as f: #파일열기
+with open('N3A_G0100000.json', encoding='UTF-8') as f: #파일열기
     data = json.load(f) # 파일 읽기
 
 # 데이터 출력하기(800자까지만 출력하기)
@@ -71,14 +71,14 @@ st.markdown(
 code="""
 import pandas as pd # pandas 라이브러리 불러오기
 # 시군구별(행정구역별) 합계출산율 불러오기
-df_korea_birth = pd.read_csv('../slt/연령별_출산율_및_합계출산율_행정구역별.csv', encoding='euc-kr', header=2)
+df_korea_birth = pd.read_csv('연령별_출산율_및_합계출산율_행정구역별.csv', encoding='euc-kr', header=2)
 df_korea_birth.head() # 데이터 출력하기
 """
 st.code(code, language="python")
 
 import pandas as pd # pandas 라이브러리 불러오기
 # 시군구별(행정구역별) 합계출산율 불러오기
-df_korea_birth = pd.read_csv('../slt/연령별_출산율_및_합계출산율_행정구역별.csv', encoding='euc-kr', header=2)
+df_korea_birth = pd.read_csv('연령별_출산율_및_합계출산율_행정구역별.csv', encoding='euc-kr', header=2)
 df_korea_birth.head() # 데이터 출력하기
 
 code="""
@@ -109,7 +109,7 @@ st.markdown(
 code="""
 # 지도 데이터셋 불러오기
 import geopandas as gpd
-gdf_korea_sigungu=gpd.read_file('../slt/N3A_G0100000.json')
+gdf_korea_sigungu=gpd.read_file('N3A_G0100000.json')
 gdf_korea_sigungu.head()
 
 # 시군구열 추가하기
@@ -120,7 +120,7 @@ st.code(code, language="python")
 
 # 지도 데이터셋 불러오기
 import geopandas as gpd
-gdf_korea_sigungu=gpd.read_file('../slt/N3A_G0100000.json')
+gdf_korea_sigungu=gpd.read_file('N3A_G0100000.json')
 gdf_korea_sigungu.head()
 
 # 시군구열 추가하기
